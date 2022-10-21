@@ -1,0 +1,201 @@
+body {
+    background-color: antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black
+}
+  
+
+.task{
+    width: 100%;
+}
+.task-heading{
+    padding: 15px;
+    background-color: azure;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+  /* task 1 */
+.task1{
+    position: relative;
+    display: flex;
+    background-color: rgb(44,44,44);
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+
+.circle{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background:  rgb(44,44,44);
+    border: 3px solid transparent;
+    transition: 1s;
+    
+}
+
+
+.line{
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(183,51,111);
+    width: 100px;
+    height: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transition: 1s;
+ 
+}
+
+.l1{
+ top: 36px 
+}
+
+.l2{
+    top: 72px  
+}
+
+.l3
+{
+    top: 108px 
+}
+
+
+.task1:hover{
+    background-color:rgb(183,51,111);
+}
+.task1:hover .circle{
+    animation: border 1s ease forwards;
+    background-color:rgb(183,51,111);
+}
+
+.task1:hover .line {
+    top: 72px;
+    background-color: white;
+   
+}
+
+.task1:hover .l1{
+    transform: rotate(45deg);
+    
+}
+
+.task1:hover .l2{
+    transform: translateX(100px);
+    opacity: 0;
+    
+}
+
+.task1:hover .l3{
+    transform: rotate(-45deg);
+  
+}
+
+@keyframes border{
+
+    25% {
+        border-left-color: white;
+    }
+
+    50% {
+        border-top-color: white;
+        border-left-color: white;
+    }
+
+    75%{
+        border-top-color: white;
+        border-right-color: white;
+        border-left-color: white;
+    }
+
+    100% {
+        border-top-color: white;
+        border-right-color: white;
+        border-bottom-color: white;
+        border-left-color: white;
+        
+    }
+  }
+
+  /* task 5 */
+.task5{
+    background-color: white;
+    margin: 40px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+
+}
+.awesome-ball{
+   
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    transform-origin: 50% -100px; 
+  }
+
+.task5:active .awesome-ball:first-child{
+    animation: move-left-top 1s infinite alternate ease-out;
+  }
+  
+.task5:active .awesome-ball:last-child{
+
+    animation: move-right-top 1s infinite alternate 1s ease-out;
+  }
+  
+
+@keyframes move-left-top {
+    0%,50% {transform: rotate(0);} 100% {transform: rotate(45deg);}
+
+}
+
+
+@keyframes move-right-top {
+    0%,50% {transform: rotate(0);} 100% {transform: rotate(-45deg);}
+}
+
+
+/* task6 */
+
+.task6{
+    
+    background-color: white;
+    margin: 40px 0;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+
+}
+
+.name{
+   width: 9%;
+   height: 100px;
+   background: url(./name.png);
+}
+
+.task6:hover .name{
+    animation: draw 2s steps(11) infinite;
+}
+
+@keyframes draw {
+   
+    100%{
+        background-position:  -1995px;
+    }
+  }
