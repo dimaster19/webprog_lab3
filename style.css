@@ -209,7 +209,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: rooster normal 30s infinite;
+    animation: rooster 20s infinite;
 }
 
 .rooster .bottom {
@@ -354,6 +354,7 @@ body {
     top: 40px;
     transform: rotate(-10deg);
     z-index: 100;
+    transform-origin: 0% 100%;
     animation: wing 1s infinite alternate;
 
     
@@ -654,8 +655,8 @@ body {
 
 @keyframes wing {
     from{
-        top: 41px;
-        transform: rotate(0 deg);
+       
+        transform: rotate(-9deg);
     }
     to{
         
@@ -728,9 +729,11 @@ body {
 
 @keyframes rooster {
     from{
-        margin-left: 0px;
+        transform: translateX(0px);
+        
     }
     to{
-        margin-left: 1200px;
+    
+        transform: translateX(1300px);
     }
 }
